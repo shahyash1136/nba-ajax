@@ -14,24 +14,32 @@ var NBA = NBA || {};
 NBA.baseurl = 'https://www.balldontlie.io/api/v1/';
 NBA.limit = 'per_page=50';
 NBA.pageNum;
+NBA.players = NBA.players || {};
 
-NBA.loadJSON = function () {
+NBA.players.loadJSON = function () {
     $.ajax({
         type: 'GET',
         url: NBA.baseurl + 'players?' + NBA.limit,
         success: function (data) {
-            NBA.players(data);
-            NBA.pagination(data);
+            NBA.players.allPlayers(data);
+            NBA.players.pagination(data);
+        },
+        complete: function () {
+            $('.loader-wrapper').hide();
         }
     })
 }
 
-
-NBA.players = function (data) {
-    console.log(data);
+NBA.players.allPlayers = function (data) {
+    var markup = '';
+    var player = data.data;
+    for (let i = 0; i < player.length; i++) {
+        markup += '<div class="player" data-playerid="'+player[i].id+'"> <div class="player__container"> <div class="player__head"> <div class="player__img"> <img src="images/players/default.png" alt="'+player[i].first_name+' '+player[i].last_name+'"> </div><div class="player__team"> <img src="images/teams/'+player[i].team.id+'.png" alt="'+player[i].team.name+'"> </div><div class="player__pos"> <span>'+player[i].position+'</span> </div></div><div class="player__body"> <div class="player__firstName"> <h2>'+player[i].first_name+'</h2> </div><div class="player__lastName"> <h3>'+player[i].last_name+'</h3> </div></div></div></div>'
+    }
+    document.querySelector('.playersList__container').innerHTML = markup;
 }
 
-NBA.pagination = function (data) {
+NBA.players.pagination = function (data) {
     let btns = document.querySelectorAll('.pagination .btn');
     NBA.pageNum = 1;
     btns.forEach(btn => {
@@ -49,7 +57,7 @@ NBA.pagination = function (data) {
             }
             
             if (btnType.contains('btnPre')) {
-                if (NBA.pageNum == 1) {
+                if (NBA.pageNum === 1) {
                     NBA.pageNum = 1;
                     document.querySelector('.btn.btnPre').classList.add('disable');
                 }else{
@@ -62,7 +70,10 @@ NBA.pagination = function (data) {
                 type: 'GET',
                 url: NBA.baseurl + 'players?' + NBA.limit + '&page=' + NBA.pageNum,
                 success: function (data) {
-                    NBA.players(data);
+                    NBA.players.allPlayers(data);
+                },
+                complete: function () {
+                    $('.loader-wrapper').hide();
                 }
             })
         });
@@ -72,7 +83,6 @@ NBA.pagination = function (data) {
 
 
 
-
 $(document).ready(function () {
-    NBA.loadJSON();
+    NBA.players.loadJSON();
 })

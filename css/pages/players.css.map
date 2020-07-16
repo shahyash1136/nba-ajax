@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/players.scss"],"names":[],"mappings":"AAAA;EACI;;AACA;EACI","file":"players.css","sourcesContent":[".players{\r\n    padding: 60px 0px;\r\n    .si-top{\r\n        margin-bottom: 15px;\r\n    }\r\n}"]}

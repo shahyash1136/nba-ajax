@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Anton|Roboto:300,400,500,700&display=swap");
 /* @import '_custom-icon.scss'; */
 /* @import '_maps.scss'; */
-.popup .popup-modal.recipepopup .popup-body .recipeBox, .recipe__data, .recipe__container, .search__container, .flexBox {
+.players .btnBox, .playersList__container, .players .top, .flexBox {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -23,7 +23,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #eee;
   overflow-x: hidden;
 }
 body.ar {
@@ -315,18 +315,18 @@ body.ar {
   background: transparent;
 }
 .btn.active {
-  background: -webkit-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -moz-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -ms-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -o-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
+  background: -webkit-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -moz-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -ms-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -o-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
   border-color: transparent !important;
 }
 .btn.active span {
   color: #ffffff !important;
 }
 .btn_ {
-  background-color: #FBDB89;
+  background-color: #1d428a;
   height: 30px;
   color: #ffffff;
 }
@@ -339,7 +339,7 @@ body.ar {
 .btn_--outline {
   height: 30px;
   background-color: transparent;
-  border: 1px solid #F48982;
+  border: 1px solid #026bb6;
 }
 .btn_--outline span {
   font-size: 14px;
@@ -381,7 +381,7 @@ body.ar {
   position: relative;
   padding: 10px;
   padding-right: 40px;
-  border: 1px solid #FBDB89;
+  border: 1px solid #1d428a;
   background: rgba(255, 255, 255, 0.65);
   font-size: 14px;
   text-transform: uppercase;
@@ -393,7 +393,7 @@ body.ar {
 }
 .drpDwn__value:after {
   font-family: "superhero" !important;
-  color: #FBDB89;
+  color: #1d428a;
   position: absolute;
   left: auto;
   right: 10px;
@@ -474,7 +474,7 @@ body.ar {
   background: transparent;
   border: 1px solid #000000;
   font-size: 14px;
-  color: #F48982;
+  color: #026bb6;
   padding: 10px;
   padding-right: 35px;
   height: 40px;
@@ -517,11 +517,11 @@ body.ar {
 .checkBox [type=checkbox]:checked + label:after, .checkBox [type=checkbox]:not(:checked) + label:after {
   content: "";
   font-family: "superhero" !important !important;
-  background: -webkit-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -moz-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -ms-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: -o-linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
-  background: linear-gradient(-45deg, #F48982 0%, #FBDB89 50%);
+  background: -webkit-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -moz-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -ms-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: -o-linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
+  background: linear-gradient(-45deg, #026bb6 0%, #1d428a 50%);
   width: 30px;
   height: 30px;
   position: absolute;
@@ -592,7 +592,7 @@ body.ar {
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
-  color: #F48982;
+  color: #026bb6;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
@@ -615,7 +615,7 @@ body.ar {
   content: "";
   width: 12px;
   height: 12px;
-  background: #FBDB89;
+  background: #1d428a;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -695,7 +695,7 @@ body.ar {
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
   font-size: 20px;
-  color: #F48982;
+  color: #026bb6;
   right: 13px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -752,7 +752,7 @@ body.ar {
 }
 .icon.arrowDown::after {
   content: "";
-  color: #FBDB89;
+  color: #1d428a;
 }
 
 .closeBtn {
@@ -874,7 +874,7 @@ body.ar {
   background-color: #ffffff;
 }
 .commonselectbox .options ul li:hover {
-  background-color: #FBDB89;
+  background-color: #1d428a;
   color: #ffffff;
 }
 .commonselectbox .options ul li:not(:last-child) {
@@ -1171,7 +1171,7 @@ body.ar {
   top: 0%;
   width: 10%;
   height: 10%;
-  background-color: #FBDB89;
+  background-color: #1d428a;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1543,310 +1543,222 @@ _:-ms-fullscreen,
   align-items: stretch;
 }
 
-.search {
-  padding: 60px 0;
-  background: -webkit-linear-gradient(45deg, #fbdb89 50%, #f48982 100%);
-  background: -moz-linear-gradient(45deg, #fbdb89 50%, #f48982 100%);
-  background: -ms-linear-gradient(45deg, #fbdb89 50%, #f48982 100%);
-  background: -o-linear-gradient(45deg, #fbdb89 50%, #f48982 100%);
-  background: linear-gradient(45deg, #fbdb89 50%, #f48982 100%);
+.footer__top {
+  height: 156px;
+  background-color: #1d428a;
 }
-.search__container {
+.footer__bottom {
+  height: 40px;
+  background-color: #0a3765;
+}
+
+header .header {
+  height: 90px;
+  background-color: #1d428a;
+}
+
+.loader-wrapper {
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.floor {
+  position: absolute;
+  width: 314.159265359px;
+  bottom: 0px;
+  height: 4px;
+  background: #505050;
+  animation-name: floor_move;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+}
+
+.ball {
+  width: 50%;
+  height: 100px;
+  border-radius: 50%;
+  left: 0;
+  background: #ffae58;
+  position: absolute;
+  border: 4px solid #ac4b07;
+  bottom: 4px;
+  animation-name: ball;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  overflow: hidden;
+}
+
+.ball-line {
+  position: absolute;
+  width: calc(100% + 2px);
+  height: 4px;
+  background: #ac4b07;
+}
+
+.ball-line:nth-child(1) {
+  top: 50%;
+  margin-top: -2px;
+}
+
+.ball-line:nth-child(2) {
+  width: 100%;
+  height: 30%;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  background: transparent;
+  border: 4px solid #ac4b07;
+  top: -10px;
+}
+
+.ball-line:nth-child(3) {
+  width: 100%;
+  height: 30%;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  background: transparent;
+  border: 4px solid #ac4b07;
+  bottom: -10px;
+}
+
+.ball-line:nth-child(4) {
+  top: 50%;
+  margin-top: -2px;
+  transform: rotate(90deg);
+}
+
+@keyframes ball {
+  from, to {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes floor_move {
+  from, to {
+    left: 50px;
+  }
+  50% {
+    left: -264.159265359px;
+  }
+}
+.players {
+  padding: 60px 0px;
+}
+.players .top {
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.playersList__container {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0px -10px;
+  min-height: 600px;
+}
+.players .btnBox {
   justify-content: center;
   align-items: center;
 }
-.search__left {
-  flex: 0 0 35%;
-  width: 35%;
-  height: 35px;
-}
-.search__left input {
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  border: none;
-  border: 1px solid transparent;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-.search__left input::-webkit-input-placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-.search__left input::-moz-placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-.search__left input:-moz-placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-.search__left input:-ms-input-placeholder {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-}
-.search__left input:focus {
-  border: none;
-  outline: none;
-}
-.search__right {
-  margin-left: 15px;
-}
-.search__right .btn {
-  min-width: 120px;
+.players .btnBox .btn {
   width: 120px;
-  height: 35px;
+  min-width: 120px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  background-color: #f48982;
+  height: 35px;
   color: #ffffff;
+  background: #1d428a;
+}
+.players .btnBox .btn:not(:last-child) {
+  margin-right: 15px;
 }
 
-.recipe__list {
-  padding: 50px 0px 60px;
-}
-.recipe__container {
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 0px -10px;
-}
-.recipe__box {
+.player {
   flex: 0 0 25%;
   width: 25%;
   padding: 0px 10px;
-  margin-top: 20px;
+  margin: 20px 0px 0px;
 }
-.recipe__containerBox {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+.player__container {
+  background-color: #f6f6f6;
   overflow: hidden;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
 }
-.recipe__image {
-  line-height: 0;
-  overflow: hidden;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-}
-.recipe__image img {
-  width: 275px;
-  height: 184px;
-  object-fit: cover;
-}
-.recipe__data {
-  flex-flow: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.recipe__name {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  color: #f48982;
-  text-transform: uppercase;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 100%;
+.player__head {
   position: relative;
+  z-index: 1;
 }
-.recipe__publisher {
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-  margin-top: 10px;
-}
-.recipe__bottom {
-  padding: 20px 10px;
-}
-.recipe__bottom .btn {
-  height: 35px;
-  min-width: 110px;
-  width: 110px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  margin: 20px auto 0;
-  background-color: #f48982;
-  color: white;
-  text-transform: uppercase;
-  border: 1px solid #f48982;
-}
-.recipe__bottom .btn:hover {
-  background-color: transparent;
-  color: #f48982;
-  border-color: #f48982;
-}
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #f48982;
-  top: 50%;
-  animation: loader 2s infinite ease;
-}
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #f48982;
-  animation: loader-inner 2s infinite ease-in;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 0%;
-  }
-  50% {
-    height: 100%;
-  }
-  75% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
-.popup .popup-modal.recipepopup {
-  max-width: 800px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.popup .popup-modal.recipepopup .popup-modal-bg {
-  max-width: inherit;
-  padding: 0;
-}
-.popup .popup-modal.recipepopup .popup-body {
-  display: block;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__left {
-  flex: 0 0 50%;
-  width: 50%;
-  overflow: hidden;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__left .imageBox {
-  line-height: 0;
-  height: 100%;
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right {
-  flex: 0 0 50%;
-  width: 50%;
-  padding: 15px;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right .heading {
-  margin-bottom: 15px;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right .heading h2 {
-  font-size: 24px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  color: #F48982;
-  text-transform: uppercase;
-  text-align: center;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right .heading-2 {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  color: #F48982;
-  text-transform: uppercase;
-  margin: 20px 0;
-  text-align: center;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right .ingredients ul {
-  list-style: none;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right .ingredients ul li {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #968B87;
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right p {
-  font-size: 15px;
-  text-align: center;
-  color: #968B87;
-  width: 90%;
-  margin: 0 auto 20px;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right p a {
-  color: #968B87;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-.popup .popup-modal.recipepopup .popup-body .recipeBox__right a.btn {
-  height: 35px;
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  width: 100px;
+.player__img {
+  width: calc(100% - 30%);
   margin: auto;
-  background: -webkit-linear-gradient(135deg, #fbdb89 0%, #f48982 100%);
-  background: -moz-linear-gradient(135deg, #fbdb89 0%, #f48982 100%);
-  background: -ms-linear-gradient(135deg, #fbdb89 0%, #f48982 100%);
-  background: -o-linear-gradient(135deg, #fbdb89 0%, #f48982 100%);
-  background: linear-gradient(135deg, #fbdb89 0%, #f48982 100%);
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 1;
+}
+.player__img img {
+  width: 100%;
+  height: auto;
+}
+.player__team {
+  position: absolute;
+  width: calc(100% - 75%);
+  left: 0;
+  top: 0;
+}
+.player__team img {
+  width: 100%;
+  height: auto;
+}
+.player__pos {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 45px;
+  line-height: 1;
+  opacity: 0.2;
+  font-family: "Anton", sans-serif;
   font-weight: 400;
+  color: #026bb6;
+}
+.player__body {
+  background-color: #ffffff;
+  margin: -4px -10px -10px;
+  padding: 10px;
+}
+.player__firstName {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #026bb6;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.player__lastName {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #0a3765;
+  line-height: 1;
 }
 /*# sourceMappingURL=main.css.map */
